@@ -19,7 +19,7 @@ class IsAdmin {
         if (Auth::user() && Auth::user()->is_admin == 1) {
             return $next($request);
         }
-        return redirect('home')->with('error', 'not admin');
+        return redirect('/dashboard')->with('error', 'not admin');
     }
 
 }
